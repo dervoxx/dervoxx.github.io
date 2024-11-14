@@ -127,7 +127,6 @@ h1 span {
     font-size: 1rem;
     color: white; /* White color for the GitHub text */
     text-decoration: none;
-    margin-right: 3px; /* Reduced space between the links */
     font-family: 'Fira Sans Condensed', sans-serif; /* Apply Fira Sans Condensed font */
     transition: color 0.3s ease;
 }
