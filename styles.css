@@ -102,7 +102,7 @@ body, html {
 
 /* Make the text larger and more visible */
 h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     color: white;
     line-height: 1.2;
 }
@@ -132,17 +132,17 @@ h1 span {
     transition: color 0.3s ease;
 }
 
+/* Hover effect for GitHub link */
 .github-link:hover {
     color: #ff6347; /* Change to tomato color on hover */
 }
 
-/* Style for the Email link */
+/* Style for the email link */
 .email-link {
     font-size: 1rem;
-    color: white; /* White color for the Email text */
+    color: white;
     text-decoration: none;
-    margin-left: 3px; /* Reduced space between the links */
-    font-family: 'Fira Sans Condensed', sans-serif; /* Apply Fira Sans Condensed font */
+    font-family: 'Fira Sans Condensed', sans-serif;
     transition: color 0.3s ease;
 }
 
@@ -150,38 +150,61 @@ h1 span {
     color: #ff6347; /* Change to tomato color on hover */
 }
 
-/* Style for the dot between GitHub and Email */
-.dot {
-    color: white;
-    font-size: 1.5rem;
-    margin: 0 3px; /* Reduced space between the dot and the links */
-    vertical-align: middle;
-}
-
-/* Focus-in-expand keyframe animation */
-@-webkit-keyframes focus-in-expand {
-    0% {
-        letter-spacing: -0.5em;
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
-        opacity: 0;
-    }
-    100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
-}
+/* Animation for the links */
 @keyframes focus-in-expand {
     0% {
-        letter-spacing: -0.5em;
-        -webkit-filter: blur(12px);
-        filter: blur(12px);
+        transform: scale(0);
         opacity: 0;
     }
     100% {
-        -webkit-filter: blur(0px);
-        filter: blur(0px);
+        transform: scale(1);
         opacity: 1;
+    }
+}
+
+/* Style for the dot between the links */
+.dot {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 10px;
+}
+
+/* Apply animation for the drawing effect on the main logo */
+#logo-path {
+    stroke-dasharray: 4200; /* 20% more than the original length */
+    stroke-dashoffset: 4200; /* Start with the path hidden */
+    animation: draw-logo 7s ease-in-out forwards; /* Smooth transition with ease-in-out */
+}
+
+/* Keyframes for drawing the main logo */
+@keyframes draw-logo {
+    0% {
+        stroke-dashoffset: 4200; /* Start with path hidden */
+    }
+    50% {
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Reset to start: path hidden again */
+    }
+}
+
+/* Apply animation for the drawing effect on the triangle */
+#triangle {
+    stroke-dasharray: 2400; /* Total length of the triangle */
+    stroke-dashoffset: 2400; /* Start with the triangle hidden */
+    animation: draw-triangle 7s ease-in-out forwards; /* Smooth transition with ease-in-out */
+}
+
+/* Keyframes for drawing the triangle */
+@keyframes draw-triangle {
+    0% {
+        stroke-dashoffset: 2400; /* Start with the triangle hidden */
+    }
+    50% {
+        stroke-dashoffset: 0; /* Fully drawn */
+    }
+    100% {
+        stroke-dashoffset: 0; /* Reset to start: triangle hidden again */
     }
 }
