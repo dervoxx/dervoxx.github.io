@@ -13,7 +13,7 @@ body, html {
     justify-content: center;
     align-items: center;
     background-color: #111; /* Dark background */
-    font-family: 'Roboto Slab', serif; /* Apply Roboto Slab font for main text */
+    font-family: 'Montserrat', serif;
 }
 
 /* Centered container for the text */
