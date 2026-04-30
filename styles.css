@@ -21,6 +21,16 @@ body, html {
     text-align: center;
 }
 
+.logo {
+    width: 12rem;
+    aspect-ratio: 1;
+    margin: 0 auto 16px;
+}
+
+.logo svg {
+    display: block;
+}
+
 /* Define the tracking-in-contract-bck-top animation */
 @-webkit-keyframes tracking-in-contract-bck-top {
     0% {
@@ -166,44 +176,4 @@ h1 span {
     font-size: 1.5rem;
     color: white;
     margin: 0 10px;
-}
-
-/* Apply animation for the drawing effect on the main logo */
-#logo-path {
-    stroke-dasharray: 4200; /* 20% more than the original length */
-    stroke-dashoffset: 4200; /* Start with the path hidden */
-    animation: draw-logo 7s ease-in-out forwards; /* Smooth transition with ease-in-out */
-}
-
-/* Keyframes for drawing the main logo */
-@keyframes draw-logo {
-    0% {
-        stroke-dashoffset: 4200; /* Start with path hidden */
-    }
-    50% {
-        stroke-dashoffset: 0; /* Fully drawn */
-    }
-    100% {
-        stroke-dashoffset: 0; /* Reset to start: path hidden again */
-    }
-}
-
-/* Apply animation for the drawing effect on the triangle */
-#triangle {
-    stroke-dasharray: 2400; /* Total length of the triangle */
-    stroke-dashoffset: 2400; /* Start with the triangle hidden */
-    animation: draw-triangle 7s ease-in-out forwards; /* Smooth transition with ease-in-out */
-}
-
-/* Keyframes for drawing the triangle */
-@keyframes draw-triangle {
-    0% {
-        stroke-dashoffset: 2400; /* Start with the triangle hidden */
-    }
-    50% {
-        stroke-dashoffset: 0; /* Fully drawn */
-    }
-    100% {
-        stroke-dashoffset: 0; /* Reset to start: triangle hidden again */
-    }
 }
